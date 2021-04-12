@@ -1,0 +1,24 @@
+ /*
+  * 217. Contains Duplicate - 
+  * Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+  */
+ class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        
+        Map<Integer,Integer> frequencyMap = new TreeMap<Integer,Integer>();
+        
+        for(Integer num : nums){
+            if(frequencyMap.containsKey(num))
+                frequencyMap.put(num,frequencyMap.get(num)+1);
+            else
+                frequencyMap.put(num,1);
+        }
+        
+        for(Map.Entry<Integer,Integer> map : frequencyMap.entrySet()){
+            if(map.getValue()>1){
+                return true;
+            }
+        }
+        return false;
+    }
+}
