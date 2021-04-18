@@ -1,5 +1,3 @@
-package com.demo.activitiDemo.googleCodeJam;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
