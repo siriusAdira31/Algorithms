@@ -26,7 +26,7 @@ public class MergeSort{
 			return;
 		}
 
-		if(rightIndex > leftIndex){
+		if(leftIndex < rightIndex){
 			int mid = leftIndex + (rightIndex- leftIndex)/2;
 
 			sort(arr,leftIndex,mid);
